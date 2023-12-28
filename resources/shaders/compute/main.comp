@@ -1,0 +1,105 @@
+#version 450
+
+layout(std140, binding = 0) buffer RaytracingData {
+    mat4 view;
+    mat4 proj;
+    vec4 camPos;
+    vec4 viewParams;
+} data;
+
+layout (binding = 1, rgba32f) uniform image2D tex;
+
+layout (local_size_x = 8, local_size_y = 8, local_size_z = 1) in;
+
+struct Ray {
+    vec3 origin;
+    vec3 dir;
+};
+
+struct HitInfo {
+    bool didHit;
+    float dst;
+    vec3 hitPoint;
+    vec3 normal;
+};
+
+// Calculate the intersection of a ray with a sphere
+HitInfo RaySphere(Ray ray, vec3 sphereCentre, float sphereRadius)
+{
+	//sphereCentre += vec3(0.001);
+
+	HitInfo hitInfo;
+
+	vec3 offsetRayOrigin = ray.origin - sphereCentre;
+	// From the equation: sqrLength(rayOrigin + rayDir * dst) = radius^2
+	// Solving for dst results in a quadratic equation with coefficients:
+	float a = dot(ray.dir, ray.dir); // a = 1 (assuming unit vector)
+	float b = 2 * dot(offsetRayOrigin, ray.dir);
+	float c = dot(offsetRayOrigin, offsetRayOrigin) - sphereRadius * sphereRadius;
+	// Quadratic discriminant
+	float discriminant = b * b - 4 * a * c; 
+
+	// No solution when d < 0 (ray misses sphere)
+	if (discriminant >= 0) {
+		// Distance to nearest intersection point (from quadratic formula)
+		float dst = (-b - sqrt(discriminant)) / (2 * a);
+
+		// Ignore intersections that occur behind the ray
+		if (dst >= 0) {
+			hitInfo.didHit = true;
+			hitInfo.dst = dst;
+			hitInfo.hitPoint = ray.origin + ray.dir * dst;
+			hitInfo.normal = normalize(hitInfo.hitPoint - sphereCentre);
+		} else {
+			hitInfo.didHit = false;
+		}
+	} else {
+		hitInfo.didHit = false;
+	}
+	return hitInfo;
+}
+
+// Crude sky colour function for background light
+vec3 GetEnvironmentLight(Ray ray)
+{
+				
+	vec4 GroundColour = vec4(0);
+	vec4 SkyColourHorizon = vec4(.25);
+	vec4 SkyColourZenith = vec4(.5);
+	float SunFocus = 0.1;
+	float SunIntensity = 0.1;
+	vec3 SunPos = vec3(10);
+
+	float skyGradientT = pow(smoothstep(0.0, 0.4, ray.dir.y), 0.35);
+	float groundToSkyT = smoothstep(-0.01, 0., ray.dir.y);
+	vec3 skyGradient = mix(vec3(SkyColourHorizon), vec3(SkyColourZenith), skyGradientT);
+	float sun = pow(max(0, dot(ray.dir, SunPos)), SunFocus) * SunIntensity;
+	// Combine ground, sky, and sun
+	vec3 composite = mix(vec3(GroundColour), skyGradient, groundToSkyT) + sun * float(groundToSkyT>=1);
+	return composite;
+}
+
+void main() 
+{
+
+    vec2 uv = vec2(gl_GlobalInvocationID)/imageSize(tex);
+    ivec2 screen_size = imageSize(tex);
+
+    vec4 outColor = vec4(vec3(0.0),1.0);
+
+    vec3 viewPointLocal = vec3(uv - 0.5, 1) * vec3(data.viewParams);
+    vec3 viewPoint = vec3(inverse(data.view) * vec4(viewPointLocal,1));
+
+
+
+    Ray ray;
+    ray.origin = vec3(data.camPos);
+    ray.dir = normalize(viewPoint - ray.origin);
+
+	
+	outColor.rgb = GetEnvironmentLight(ray);
+
+    outColor.rgb += vec3( ( RaySphere(ray, vec3(0,0,0),1).didHit ) );
+
+    imageStore(tex, ivec2(gl_GlobalInvocationID), outColor);
+}

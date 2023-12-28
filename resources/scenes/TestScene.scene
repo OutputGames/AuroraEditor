@@ -1,0 +1,5655 @@
+{
+  "EntityMgr": {
+    "Entities": [
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Enabled": true,
+            "Entity": 0,
+            "FOV": 90.0,
+            "FarPlane": 10000.0,
+            "Name": "Camera",
+            "NearPlane": 0.10000000149011612,
+            "Right": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "Target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Up": [
+              0.0,
+              1.0,
+              0.0
+            ]
+          }
+        ],
+        "Enabled": true,
+        "Id": 0,
+        "Name": "Camera",
+        "Transform": {
+          "Position": [
+            10.0,
+            10.0,
+            10.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Enabled": true,
+            "Entity": 1,
+            "Material": {
+              "Shader": {
+                "Id": 4,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "tex",
+                    "Set": 0,
+                    "Texture": 1,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 0,
+                  "DepthCompare": 3,
+                  "FragmentPath": "resources/shaders/cubemap/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/cubemap/main.vert"
+                }
+              }
+            },
+            "Mesh": "PRIM_CUBE",
+            "MeshIndex": -842150451,
+            "Metallic": 0.0,
+            "Name": "MeshRenderer",
+            "Roughness": 1.0
+          }
+        ],
+        "Enabled": true,
+        "Id": 1,
+        "Name": "NewEntity",
+        "Transform": {
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "Enabled": true,
+            "Entity": 2,
+            "Name": "Light",
+            "Power": 100.0
+          }
+        ],
+        "Enabled": true,
+        "Id": 2,
+        "Name": "Light",
+        "Transform": {
+          "Position": [
+            30.0,
+            30.0,
+            30.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.10000000149011612,
+              0.10000000149011612,
+              1.0
+            ],
+            "Enabled": true,
+            "Entity": 3,
+            "Material": {
+              "Shader": {
+                "Id": 5,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "PRIM_CUBE",
+            "MeshIndex": -842150451,
+            "Metallic": 0.0,
+            "Name": "MeshRenderer",
+            "Roughness": 1.0
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 3,
+            "MotionType": 0,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 3,
+        "Name": "Plane",
+        "Transform": {
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            100.0,
+            1.0,
+            100.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.10000000149011612,
+              0.10000000149011612,
+              1.0
+            ],
+            "Enabled": true,
+            "Entity": 4,
+            "Material": {
+              "Shader": {
+                "Id": 6,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "PRIM_CUBE",
+            "MeshIndex": -842150451,
+            "Metallic": 0.0,
+            "Name": "MeshRenderer",
+            "Roughness": 1.0
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 4,
+            "MotionType": 0,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 4,
+        "Name": "Plane",
+        "Transform": {
+          "Position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Rotation": [
+            -15.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            50.0,
+            1.0,
+            50.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.04898220673203468,
+              0.4044618010520935,
+              0.9158299565315247
+            ],
+            "Enabled": true,
+            "Entity": 5,
+            "Material": {
+              "Shader": {
+                "Id": 7,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.825861394405365,
+            "Name": "MeshRenderer",
+            "Roughness": 0.31406599283218384
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 5,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 5,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            6.850000381469727,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.16064943373203278,
+              0.07654042541980743,
+              0.4754173457622528
+            ],
+            "Enabled": true,
+            "Entity": 6,
+            "Material": {
+              "Shader": {
+                "Id": 8,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.35190892219543457,
+            "Name": "MeshRenderer",
+            "Roughness": 0.6160771250724792
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 6,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 6,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            6.850000381469727,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.6627094149589539,
+              0.7003998160362244,
+              0.6024353504180908
+            ],
+            "Enabled": true,
+            "Entity": 7,
+            "Material": {
+              "Shader": {
+                "Id": 9,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.9485763311386108,
+            "Name": "MeshRenderer",
+            "Roughness": 0.575060248374939
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 7,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 7,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            6.850000381469727,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.47105318307876587,
+              0.9232154488563538,
+              0.16187018156051636
+            ],
+            "Enabled": true,
+            "Entity": 8,
+            "Material": {
+              "Shader": {
+                "Id": 10,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.711996853351593,
+            "Name": "MeshRenderer",
+            "Roughness": 0.1990722417831421
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 8,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 8,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            8.949999809265137,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.14685507118701935,
+              0.8799096941947937,
+              0.19217506051063538
+            ],
+            "Enabled": true,
+            "Entity": 9,
+            "Material": {
+              "Shader": {
+                "Id": 11,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.22553178668022156,
+            "Name": "MeshRenderer",
+            "Roughness": 0.34754478931427
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 9,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 9,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            8.949999809265137,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.1976683884859085,
+              0.04821924492716789,
+              0.939176619052887
+            ],
+            "Enabled": true,
+            "Entity": 10,
+            "Material": {
+              "Shader": {
+                "Id": 12,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.2706686556339264,
+            "Name": "MeshRenderer",
+            "Roughness": 0.20777001976966858
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 10,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 10,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            8.949999809265137,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.8969694972038269,
+              0.809015154838562,
+              0.4927823841571808
+            ],
+            "Enabled": true,
+            "Entity": 11,
+            "Material": {
+              "Shader": {
+                "Id": 13,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.4137699604034424,
+            "Name": "MeshRenderer",
+            "Roughness": 0.30426955223083496
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 11,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 11,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            11.050000190734863,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.556291401386261,
+              0.9065217971801758,
+              0.4497512876987457
+            ],
+            "Enabled": true,
+            "Entity": 12,
+            "Material": {
+              "Shader": {
+                "Id": 14,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.3722037374973297,
+            "Name": "MeshRenderer",
+            "Roughness": 0.7564927935600281
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 12,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 12,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            11.050000190734863,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.3817255198955536,
+              0.8901028633117676,
+              0.9335001707077026
+            ],
+            "Enabled": true,
+            "Entity": 13,
+            "Material": {
+              "Shader": {
+                "Id": 15,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.52226322889328,
+            "Name": "MeshRenderer",
+            "Roughness": 0.06018250063061714
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 13,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 13,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -3.1499998569488525,
+            11.050000190734863,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.2710043787956238,
+              0.1349528431892395,
+              0.1672719568014145
+            ],
+            "Enabled": true,
+            "Entity": 14,
+            "Material": {
+              "Shader": {
+                "Id": 16,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.1342814415693283,
+            "Name": "MeshRenderer",
+            "Roughness": 0.8339793086051941
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 14,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 14,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            6.850000381469727,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.058229316025972366,
+              0.13327433168888092,
+              0.9022186994552612
+            ],
+            "Enabled": true,
+            "Entity": 15,
+            "Material": {
+              "Shader": {
+                "Id": 17,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.7584764957427979,
+            "Name": "MeshRenderer",
+            "Roughness": 0.5092929005622864
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 15,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 15,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            6.850000381469727,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.8635517358779907,
+              0.29853206872940063,
+              0.3186742663383484
+            ],
+            "Enabled": true,
+            "Entity": 16,
+            "Material": {
+              "Shader": {
+                "Id": 18,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.6320078372955322,
+            "Name": "MeshRenderer",
+            "Roughness": 0.055970948189496994
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 16,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 16,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            6.850000381469727,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.49662771821022034,
+              0.7550889849662781,
+              0.031495101749897
+            ],
+            "Enabled": true,
+            "Entity": 17,
+            "Material": {
+              "Shader": {
+                "Id": 19,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.5795770287513733,
+            "Name": "MeshRenderer",
+            "Roughness": 0.7203283905982971
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 17,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 17,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            8.949999809265137,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.2846766710281372,
+              0.6405529975891113,
+              0.6999419927597046
+            ],
+            "Enabled": true,
+            "Entity": 18,
+            "Material": {
+              "Shader": {
+                "Id": 20,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.43388164043426514,
+            "Name": "MeshRenderer",
+            "Roughness": 0.019196143373847008
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 18,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 18,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            8.949999809265137,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.9782403111457825,
+              0.7626575231552124,
+              0.3089998960494995
+            ],
+            "Enabled": true,
+            "Entity": 19,
+            "Material": {
+              "Shader": {
+                "Id": 21,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.22559282183647156,
+            "Name": "MeshRenderer",
+            "Roughness": 0.01553392130881548
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 19,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 19,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            8.949999809265137,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.006286812946200371,
+              0.7319864630699158,
+              0.9508957266807556
+            ],
+            "Enabled": true,
+            "Entity": 20,
+            "Material": {
+              "Shader": {
+                "Id": 22,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.08206427097320557,
+            "Name": "MeshRenderer",
+            "Roughness": 0.809045672416687
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 20,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 20,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            11.050000190734863,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.04412976652383804,
+              0.3432416617870331,
+              0.8035828471183777
+            ],
+            "Enabled": true,
+            "Entity": 21,
+            "Material": {
+              "Shader": {
+                "Id": 23,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.3556627035140991,
+            "Name": "MeshRenderer",
+            "Roughness": 0.10898159444332123
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 21,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 21,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            11.050000190734863,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.9603259563446045,
+              0.11181981861591339,
+              0.2624897062778473
+            ],
+            "Enabled": true,
+            "Entity": 22,
+            "Material": {
+              "Shader": {
+                "Id": 24,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.7804803848266602,
+            "Name": "MeshRenderer",
+            "Roughness": 0.9903561472892761
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 22,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 22,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            -1.0499999523162842,
+            11.050000190734863,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.44947659969329834,
+              0.9430219531059265,
+              0.6047853231430054
+            ],
+            "Enabled": true,
+            "Entity": 23,
+            "Material": {
+              "Shader": {
+                "Id": 25,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.6685079336166382,
+            "Name": "MeshRenderer",
+            "Roughness": 0.7601550221443176
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 23,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 23,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            6.850000381469727,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.9309061169624329,
+              0.3487350046634674,
+              0.4778282940387726
+            ],
+            "Enabled": true,
+            "Entity": 24,
+            "Material": {
+              "Shader": {
+                "Id": 26,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.43375957012176514,
+            "Name": "MeshRenderer",
+            "Roughness": 0.4499038755893707
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 24,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 24,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            6.850000381469727,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.347697377204895,
+              0.8115482330322266,
+              0.8963591456413269
+            ],
+            "Enabled": true,
+            "Entity": 25,
+            "Material": {
+              "Shader": {
+                "Id": 27,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.28882718086242676,
+            "Name": "MeshRenderer",
+            "Roughness": 0.43308815360069275
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 25,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 25,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            6.850000381469727,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.30570390820503235,
+              0.05691701918840408,
+              0.23526719212532043
+            ],
+            "Enabled": true,
+            "Entity": 26,
+            "Material": {
+              "Shader": {
+                "Id": 28,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.38346508145332336,
+            "Name": "MeshRenderer",
+            "Roughness": 0.39194920659065247
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 26,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 26,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            8.949999809265137,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.9144260883331299,
+              0.634601891040802,
+              0.5461592674255371
+            ],
+            "Enabled": true,
+            "Entity": 27,
+            "Material": {
+              "Shader": {
+                "Id": 29,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.8669698238372803,
+            "Name": "MeshRenderer",
+            "Roughness": 0.061372723430395126
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 27,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 27,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            8.949999809265137,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.5934324264526367,
+              0.8942533731460571,
+              0.32203131914138794
+            ],
+            "Enabled": true,
+            "Entity": 28,
+            "Material": {
+              "Shader": {
+                "Id": 30,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.8463698029518127,
+            "Name": "MeshRenderer",
+            "Roughness": 0.23490096628665924
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 28,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 28,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            8.949999809265137,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.6449781656265259,
+              0.8011108636856079,
+              0.8246406316757202
+            ],
+            "Enabled": true,
+            "Entity": 29,
+            "Material": {
+              "Shader": {
+                "Id": 31,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.395733505487442,
+            "Name": "MeshRenderer",
+            "Roughness": 0.3343607783317566
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 29,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 29,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            11.050000190734863,
+            -3.1499998569488525
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.9452803134918213,
+              0.0797143504023552,
+              0.8755149841308594
+            ],
+            "Enabled": true,
+            "Entity": 30,
+            "Material": {
+              "Shader": {
+                "Id": 32,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.29697561264038086,
+            "Name": "MeshRenderer",
+            "Roughness": 0.7458418607711792
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 30,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 30,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            11.050000190734863,
+            -1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.8518631458282471,
+              0.9777520298957825,
+              0.4821314215660095
+            ],
+            "Enabled": true,
+            "Entity": 31,
+            "Material": {
+              "Shader": {
+                "Id": 33,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "resources/models/Obj_Box01S/Obj_Box01S.fbx",
+            "MeshIndex": 0,
+            "Metallic": 0.32163456082344055,
+            "Name": "MeshRenderer",
+            "Roughness": 0.06247138977050781
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Extents": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "Enabled": true,
+            "Entity": 31,
+            "MotionType": 2,
+            "Name": "Rigidbody"
+          }
+        ],
+        "Enabled": true,
+        "Id": 31,
+        "Name": "Sphere",
+        "Transform": {
+          "Position": [
+            1.0499999523162842,
+            11.050000190734863,
+            1.0499999523162842
+          ],
+          "Rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "Children": null,
+        "Components": [
+          {
+            "Color": [
+              0.20114749670028687,
+              0.11832026392221451,
+              0.6191595196723938
+            ],
+            "Enabled": true,
+            "Entity": 32,
+            "Material": {
+              "Shader": {
+                "Id": 34,
+                "Ports": [
+                  {
+                    "Binding": 0,
+                    "Count": 1,
+                    "Name": "transformationBuffer",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 1,
+                    "Count": 1,
+                    "Name": "postProcessingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 2,
+                    "Count": 1,
+                    "Name": "lightingSettings",
+                    "Set": 0,
+                    "Type": 6
+                  },
+                  {
+                    "Binding": 3,
+                    "Count": 1,
+                    "Name": "brdf",
+                    "Set": 0,
+                    "Texture": 3,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 4,
+                    "Count": 1,
+                    "Name": "irradiance",
+                    "Set": 0,
+                    "Texture": 2,
+                    "Type": 1
+                  },
+                  {
+                    "Binding": 5,
+                    "Count": 1,
+                    "Name": "prefilter",
+                    "Set": 0,
+                    "Texture": 4,
+                    "Type": 1
+                  }
+                ],
+                "Settings": {
+                  "ComputePath": "",
+                  "CullFlags": 2,
+                  "DepthCompare": 1,
+                  "FragmentPath": "resources/shaders/fresnel/main.frag",
+                  "FrontFace": 0,
+                  "GeometryPath": "",
+                  "VertexPath": "resources/shaders/fresnel/main.vert"
+                }
+              }
+            },
+            "Mesh": "PRIM_CAPSULE",
+            "MeshIndex": -842150451,
+            "Metallic": 0.9748832583427429,
+            "Name": "MeshRenderer",
+            "Roughness": 0.10147404670715332
+          },
+          {
+            "Center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "Height": 2.0,
+            "Radius": 1.0
+          },
+          {
+            "Enabled": true,
+            "Entity": 32,
+            "Name": "CharacterController"
+          },
+          {
+            "Enabled": true,
+            "Entity": 32,
+            "Name": "PlayerController"
+          }
+        ],
+        "Enabled": true,
+        "Id": 32,
+        "Name": "Player",
+        "Transform": {
+          "Position": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "Rotation": [
+            90.0,
+            0.0,
+            0.0
+          ],
+          "Scale": [
+            3.0,
+            3.0,
+            3.0
+          ]
+        }
+      }
+    ]
+  },
+  "Name": "TestScene",
+  "ShaderFactory": {
+    "LoadedShaders": [
+      {
+        "Id": 0,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "equirectangularMap",
+            "Set": 0,
+            "Texture": 0,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 0,
+          "DepthCompare": 7,
+          "FragmentPath": "resources/shaders/equi/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/equi/main.vert"
+        }
+      },
+      {
+        "Id": 1,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "equirectangularMap",
+            "Set": 0,
+            "Texture": 1,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 0,
+          "DepthCompare": 7,
+          "FragmentPath": "resources/shaders/irradiance/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/equi/main.vert"
+        }
+      },
+      {
+        "Id": 2,
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 0,
+          "DepthCompare": 7,
+          "FragmentPath": "resources/shaders/brdf/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/brdf/main.vert"
+        }
+      },
+      {
+        "Id": 3,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "equirectangularMap",
+            "Set": 0,
+            "Texture": 1,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 0,
+          "DepthCompare": 7,
+          "FragmentPath": "resources/shaders/prefilter/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/equi/main.vert"
+        }
+      },
+      {
+        "Id": 4,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "tex",
+            "Set": 0,
+            "Texture": 1,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 0,
+          "DepthCompare": 3,
+          "FragmentPath": "resources/shaders/cubemap/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/cubemap/main.vert"
+        }
+      },
+      {
+        "Id": 5,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 6,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 7,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 8,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 9,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 10,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 11,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 12,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 13,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 14,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 15,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 16,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 17,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 18,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 19,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 20,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 21,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 22,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 23,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 24,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 25,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 26,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 27,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 28,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 29,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 30,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 31,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 32,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 33,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      },
+      {
+        "Id": 34,
+        "Ports": [
+          {
+            "Binding": 0,
+            "Count": 1,
+            "Name": "transformationBuffer",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 1,
+            "Count": 1,
+            "Name": "postProcessingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 2,
+            "Count": 1,
+            "Name": "lightingSettings",
+            "Set": 0,
+            "Type": 6
+          },
+          {
+            "Binding": 3,
+            "Count": 1,
+            "Name": "brdf",
+            "Set": 0,
+            "Texture": 3,
+            "Type": 1
+          },
+          {
+            "Binding": 4,
+            "Count": 1,
+            "Name": "irradiance",
+            "Set": 0,
+            "Texture": 2,
+            "Type": 1
+          },
+          {
+            "Binding": 5,
+            "Count": 1,
+            "Name": "prefilter",
+            "Set": 0,
+            "Texture": 4,
+            "Type": 1
+          }
+        ],
+        "Settings": {
+          "ComputePath": "",
+          "CullFlags": 2,
+          "DepthCompare": 1,
+          "FragmentPath": "resources/shaders/fresnel/main.frag",
+          "FrontFace": 0,
+          "GeometryPath": "",
+          "VertexPath": "resources/shaders/fresnel/main.vert"
+        }
+      }
+    ]
+  },
+  "TextureFactory": {
+    "LoadedTextures": [
+      {
+        "Format": 43.0,
+        "Id": 0.0,
+        "Info": {
+          "Channels": 3,
+          "Height": 512,
+          "IsCubemap": false,
+          "Width": 1024
+        },
+        "Path": "resources/textures/noon_grass.hdr",
+        "Type": 0.0
+      },
+      {
+        "BaseCubemap": 0.0,
+        "Format": 109.0,
+        "Id": 1.0,
+        "Info": {
+          "Channels": 3,
+          "Height": 512,
+          "IsCubemap": true,
+          "Width": 512
+        },
+        "Path": "",
+        "Shader": 0.0,
+        "Type": 3.0
+      },
+      {
+        "BaseCubemap": 1.0,
+        "Format": 109.0,
+        "Id": 2.0,
+        "Info": {
+          "Channels": 3,
+          "Height": 32,
+          "IsCubemap": true,
+          "Width": 32
+        },
+        "Path": "",
+        "Shader": 1.0,
+        "Type": 3.0
+      },
+      {
+        "Format": 109.0,
+        "Id": 3.0,
+        "Info": {
+          "Channels": 4,
+          "Height": 512,
+          "IsCubemap": false,
+          "Width": 512
+        },
+        "Path": "",
+        "Shader": 2.0,
+        "Type": 2.0
+      },
+      {
+        "BaseCubemap": 1.0,
+        "Format": 109.0,
+        "Id": 4.0,
+        "Info": {
+          "Channels": 3,
+          "Height": 128,
+          "IsCubemap": true,
+          "Width": 128
+        },
+        "Path": "",
+        "Shader": 3.0,
+        "Type": 3.0
+      }
+    ]
+  }
+}
